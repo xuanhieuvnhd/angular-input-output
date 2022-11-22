@@ -1,4 +1,18 @@
-import { Component } from '@angular/core';
+// import { Component } from '@angular/core';
+//
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css']
+// })
+// export class AppComponent {
+//   title = 'angular-input';
+//   currentItem: string = 'IPhone 14 Promax';
+//   constructor() { }
+// }
+
+//Demo Output
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +20,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-input';
+  items = ['item1', 'item2', 'item3', 'item4'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
 }
